@@ -24,7 +24,8 @@ Place holders to see if they can pass the limit of the photo above.
 
 write(app_introduction)
 
-app_left_hand_side_column, app_right_hand_side_column = columns(2)
+# list of numbers representing the ratio of columns width
+app_left_hand_side_column, empty_column, app_right_hand_side_column = columns([3, 1, 3])
 
 apps = read_csv('data.csv', sep=';')
 
@@ -32,8 +33,14 @@ for index, row in apps.iterrows():
     if index % 2 == 0:
         with app_left_hand_side_column:
             header(row['title'])
+            write(row['description'])
+            image(f"images/{row['image']}")
+            write(f"[Source Code]({row['url']})")
     else:
         with app_right_hand_side_column:
             header(row['title'])
+            write(row['description'])
+            image(f"images/{row['image']}")
+            write(f"[Source Code]({row['url']})")
 
 
