@@ -27,7 +27,7 @@ write(app_introduction)
 # list of numbers representing the ratio of columns width
 app_left_hand_side_column, empty_column, app_right_hand_side_column = columns([3, 1, 3])
 
-apps = read_csv('data.csv', sep=';')
+apps = read_csv(filepath_or_buffer='data.csv', sep=';')
 
 for index, row in apps.iterrows():
     if index % 2 == 0:
