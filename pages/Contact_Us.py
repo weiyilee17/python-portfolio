@@ -1,5 +1,5 @@
 from streamlit import header, form, text_input, text_area, form_submit_button, info
-from send_email import send_email
+from practice.send_email import send_email
 
 header('Contact Me')
 

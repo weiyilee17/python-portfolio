@@ -3,12 +3,6 @@ from ssl import create_default_context
 from os import getenv
 
 
-"""
-Couldn't use relative path to get send_email in the parent node, thus duplicate one exactly the same
-TODO: fix to use only 1 file
-
-"""
-
 def send_email(message):
     host = 'smtp.gmail.com'
     port = 465

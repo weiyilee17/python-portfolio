@@ -1,7 +1,7 @@
 from streamlit import form, form_submit_button, text_input, text_area, selectbox, info
 from pandas import read_csv
 
-from send_email import send_email
+from practice.send_email import send_email
 
 discuss_topics = read_csv(filepath_or_buffer='practice/topics.csv')
 
