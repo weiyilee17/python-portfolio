@@ -6,9 +6,9 @@ from os import getenv
 def send_email(message):
     host = 'smtp.gmail.com'
     port = 465
-    username = 'weiyilee17@gmail.com'
-    password = getenv('PASSWORD')
-    receiver = username
+    username = getenv('EMAIL_SENDER')
+    password = getenv('PORTFOLIO_APP_PASSWORD')
+    receiver = getenv('EMAIL_RECEIVER')
     context = create_default_context()
 
     with SMTP_SSL(host, port, context=context) as server:
